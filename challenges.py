@@ -120,7 +120,7 @@ def edit_distance_dp(str1, str2):
             else:
                 dp_table[row][col] = 1 + min(
                     dp_table[row][col - 1],
-                    dp_tabel[row - 1][col],
+                    dp_table[row - 1][col],
                     dp_table[row - 1][col - 1]
                 )
 
