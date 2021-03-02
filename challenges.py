@@ -72,7 +72,7 @@ def knapsack_dp(items, capacity):
             if row == 0 or col == 0:
                 dp_table[row][col] = 0
 
-            if current_capacity > item_weight:
+            if current_capacity >= item_weight:
                 value_with = item_value + dp_table[row -1][current_capacity - item_weight]
             else:
                 value_with = 0
