@@ -94,7 +94,7 @@ def edit_distance(str1, str2):
     if str1[-1] == str2[-1]:
         return edit_distance(str1[:1], str[:-1])
 
-    retrun 1 + min(edit_distance(str1, str2[:-1]),
+    return 1 + min(edit_distance(str1, str2[:-1]),
                     edit_distance(str1[:-1], str2),
                     edit_distance(str1[:-1], str2[:-1])
                 )
