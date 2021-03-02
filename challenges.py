@@ -28,12 +28,12 @@ def lcs_dp(strA, strB):
 
     for i in range(rows):
         for j in range(cols):
-        if i == 0 or j ==0:
-            dp_table[i][j] = 0
-        elif strA[i-1] == strB[j-1]:
-            dp_table[i][j] = dp_table[i-1][j-1] + 1
-        else:
-            dp_table[i][j] = max(dp_table[i-1][j], dp_table[i][j-1])
+            if i == 0 or j ==0:
+                dp_table[i][j] = 0
+            elif strA[i-1] == strB[j-1]:
+                dp_table[i][j] = dp_table[i-1][j-1] + 1
+            else:
+                dp_table[i][j] = max(dp_table[i-1][j], dp_table[i][j-1])
 
     return dp_table[rows-1][cols-1]
 
