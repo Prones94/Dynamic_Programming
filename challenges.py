@@ -63,7 +63,7 @@ def knapsack_dp(items, capacity):
     dp_table = [[0 for j in range(cols)] for i in range(rows)]
 
     for row in range(rows):
-        for col in rane(cols):
+        for col in range(cols):
             item_value = items[row-1][2]
             item_weight = items[row-1][1]
             current_capacity = col
